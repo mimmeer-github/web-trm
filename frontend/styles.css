@@ -1,0 +1,49 @@
+:root {
+    --black: #121212;
+    --white: #fefefe;
+    --bg: var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* prevent sizing issues */
+}
+
+body {
+    font-family: monospace, monospace;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0;
+    padding: 0.45%;
+}
+
+#term {
+    white-space: pre;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+#term::selection {
+    background: var(--white);
+    color: var(--black);
+}
+
+#term::moz-selection {
+    background: var(--white);
+    color: var(--black);
+}
+
+#cursor {
+    display: inline-block;
+    width: 0.5rem;
+    background-color: var(--white);
+    color: var(--white);
+    user-select: none;
+}
+
+#cursor::selection,
+#cursor::-moz-selection {
+    background: var(--bg);
+    color: var(--bg);
+}
